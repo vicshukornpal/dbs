@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<title>91935-0405-v02</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+html, body, h1, h2, h3, h4, h5, h6 {font-family: "Kanit", sans-serif}
+</style>
+<body class="w3-theme-l5">
+
+  <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+  <div id="cbmspinerload" class="w3-center w3-padding-small" style="display: block;">
+    <i class="fa fa-spinner w3-spin" style="font-size:64px"></i>
+  </div>
+  <!-- ///////////////////////////////////////Buttom Display/////////////////////////////////////////////// -->
+    <div id="cbmmembermenu" class="w3-container w3-center w3-padding" style="display:none; width:90%; margin:auto;">    
+      <div class="w3-card w3-white w3-center w3-text-grey w3-padding-16 w3-round">
+        <br><img id="cbmmemberimg" src="https://cdn3.iconfinder.com/data/icons/galaxy-open-line-gradient-i/200/account-128.png" alt="Avatar" class="w3-center w3-circle w3-margin-bottom" style="margin:auto;width:80px">
+        <div class="w3-center w3-xlarge">สวัสดีครับ</div>
+        <div id="cbmmembername" class="w3-center w3-large w3-text-blue">คุณ </div>
+        <div class="w3-center w3-large">กรุณาพิมพ์คำถามด้านล่างครับ</div><br>
+        <p id="cbmmsgbox" contenteditable="true" class="w3-border w3-padding-32 w3-text-grey w3-round w3-margin-bottom"style="width:70%; outline:none; word-wrap:break-word;margin:auto;"></p><br>
+        <button id="cbmbt01" class="w3-button w3-card w3-padding w3-round-large w3-large w3-white w3-hover-dark-grey w3-hover-text-white w3-margin-bottom" onclick="submit01()" style="display:none;outline:none;margin:auto;"> Submit-1 >> </button>
+        <button id="cbmbt02" class="w3-button w3-card w3-padding w3-round-large w3-large w3-white w3-hover-dark-grey w3-hover-text-white w3-margin-bottom" onclick="submit02()" style="display:none;outline:none;margin:auto;"> Submit-2 >> </button>
+        <button id="cbmbt03" class="w3-button w3-card w3-padding w3-round-large w3-large w3-white w3-hover-dark-grey w3-hover-text-white w3-margin-bottom" onclick="submit03()" style="display:none;outline:none;margin:auto;"> Submit-3 >> </button>
+        <br>
+      </div>
+    </div>  
+  <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+  <div class="w3-container w3-padding-16" style="display:none;">
+    <br><input type="text" class="w3-border-0 w3-white w3-text-dark-grey" id="cbmlineuid" style="outline:none" placeholder="uid" readonly>
+    <br><input type="text" class="w3-border-0 w3-white w3-text-dark-grey" id="cbmlineudpname" style="outline:none" placeholder="udpname" readonly>
+    <br><input type="text" class="w3-border-0 w3-white w3-text-dark-grey" id="cbmlineupic" style="outline:none" placeholder="upic" readonly>
+    <br><input type="text" class="w3-border-0 w3-white w3-text-dark-grey" id="cbmlineumail" style="outline:none" placeholder="umail" readonly>
+    <br><input type="text" class="w3-border-0 w3-white w3-text-dark-grey" id="cbmlineufriend" style="outline:none" placeholder="ufriend" readonly>
+    <br><input type="text" class="w3-border-0 w3-white w3-text-dark-grey" id="cbmform" style="outline:none" placeholder="form" readonly>
+    <br><input type="text" class="w3-border-0 w3-white w3-text-dark-grey" id="cbmqr" style="outline:none" placeholder="qrcode" readonly>
+  </div>
+  <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+ 
+<script>
+/////////////////////////////////////////////////////////////////////////////////////////// submit01  
+function submit01() 
+{
+    var cbmmsgboxVal = document.getElementById("cbmmsgbox").innerText;
+    if( cbmmsgboxVal != "" )
+      {
+        document.getElementById("cbmmembermenu").style.display = "none";
+        document.getElementById("cbmspinerload").style.display = "block";
+        var appscripturl = "https://script.google.com/macros/s/AKfycbz2zIArGy5Gwzuud1quynIuohNePa7swVqbIOIG1Lt-sUJ68pA/exec"; //edit
+        preparesubmitdata(appscripturl,cbmmsgboxVal);
+      }
+    else
+      {
+        alert("โปรดกรอกข้อมูลให้ครบถ้วน")
+      }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////// submit02  
+function submit02() 
+{
+    var cbmmsgboxVal = document.getElementById("cbmmsgbox").innerText;
+    if( cbmmsgboxVal != "" )
+      {
+        document.getElementById("cbmmembermenu").style.display = "none";
+        document.getElementById("cbmspinerload").style.display = "block";
+        var appscripturl = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; //edit
+        preparesubmitdata(appscripturl,cbmmsgboxVal);
+      }
+    else
+      {
+        alert("โปรดกรอกข้อมูลให้ครบถ้วน")
+      }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////// submit03  
+function submit03() 
+{
+    var cbmmsgboxVal = document.getElementById("cbmmsgbox").innerText;
+    if( cbmmsgboxVal != "" )
+      {
+        document.getElementById("cbmmembermenu").style.display = "none";
+        document.getElementById("cbmspinerload").style.display = "block";
+        var appscripturl = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; //edit
+        preparesubmitdata(appscripturl,cbmmsgboxVal);
+      }
+    else
+      {
+        alert("โปรดกรอกข้อมูลให้ครบถ้วน")
+      }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////// preparedata
+function preparesubmitdata(appscripturl,cbmmsgboxVal)
+{  
+  var qrValue = document.getElementById("cbmqr").value;
+  var formname = document.getElementById("cbmform").value;
+  var cbmlineuidVal = document.getElementById("cbmlineuid").value;
+  var cbmlineumailVal = document.getElementById("cbmlineumail").value;
+  var cbmlineudpnameVal = document.getElementById("cbmlineudpname").value;
+  var cbmlineupicVal = document.getElementById("cbmlineupic").value;
+          var webhookdata = 
+              { 
+                "key00qrValue": qrValue,
+                "key01formName": formname, 
+                "key02msgValue": cbmmsgboxVal,
+                "key03lineUid": cbmlineuidVal,                
+                "key04lineName": cbmlineudpnameVal,
+                "key05lineEmail": cbmlineumailVal,
+                "key06linePicURL": cbmlineupicVal
+              };
+  sendsubmittodb(appscripturl,webhookdata);
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////// sendsubmittodb
+function sendsubmittodb(appscripturl,webhookdata)
+{
+    $.ajax(
+        {
+          type: "POST",
+          url: appscripturl,
+          data: webhookdata,
+          dataType: "JSON"
+        }
+    );
+   alert("ส่งคำถามเรียบร้อยแล้ว")
+   liff.closeWindow();
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////// getFriendship
+async function getFriendship() {
+      const friend = await liff.getFriendship()
+      document.getElementById("cbmlineufriend").value = friend.friendFlag;
+      if (!friend.friendFlag) {
+        if (confirm("เพิ่มบอทของเราเป็นเพื่อนเลยไหมครับ?")) {
+          liff.openWindow({ url:"https://line.me/R/ti/p/@440szcpe", external: false }) //edit
+        } else {
+          window.location.reload()
+        }
+      }
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////    
+///////////////////////////////////////////////////////////////////////////////////////////// getUserProfile
+async function getUserProfile() 
+{
+    const profile = await liff.getProfile()
+    document.getElementById("cbmlineuid").value = profile.userId;
+    document.getElementById("cbmlineudpname").value = profile.displayName;
+    document.getElementById("cbmlineumail").value = liff.getDecodedIDToken().email;
+    document.getElementById("cbmlineupic").value = profile.pictureUrl;
+    document.getElementById("cbmmemberimg").src = profile.pictureUrl;
+    document.getElementById("cbmmembername").append(profile.displayName);
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////// main (165-234)
+async function main() {
+    liff.ready.then(() => {
+        ///////////////////////////////////////
+        // if (liff.isInClient()) { //ตรวจจับว่าใช้บนมือถือหรือไม่ comment 168 and 226-230
+              ///////////////////////////////////////
+              if (liff.isLoggedIn())
+              {
+                getFriendship()
+                getUserProfile().then(() => {
+                  
+                    const queryString = decodeURIComponent(window.location.search)
+                    const params = new URLSearchParams(queryString)
+
+                    var uidxcheck = document.getElementById("cbmlineuid").value;
+
+                        if ( params.get("code") !== "" && uidxcheck != "" ){
+
+                            var codecheck = params.get("code")
+
+                            switch(codecheck)
+                            {
+                                case "ad5sa461234xxx" : //edit
+                                    document.getElementById("cbmform").value = "form-01"; //edit
+                                    document.getElementById("cbmqr").value = codecheck;                                          
+                                    document.getElementById("cbmspinerload").style.display = "none";
+                                    document.getElementById("cbmmembermenu").style.display = "block";
+                                    document.getElementById("cbmbt01").style.display = "block";
+                                    break;
+                                case "919988xx25633" : //edit
+                                    document.getElementById("cbmform").value = "form-02"; //edit
+                                    document.getElementById("cbmqr").value = codecheck;                                          
+                                    document.getElementById("cbmspinerload").style.display = "none";
+                                    document.getElementById("cbmmembermenu").style.display = "block";
+                                    document.getElementById("cbmbt02").style.display = "block";
+                                    break;
+                                case "7855ffr6eee9s2" : //edit
+                                    document.getElementById("cbmform").value = "form-03"; //edit
+                                    document.getElementById("cbmqr").value = codecheck;                                          
+                                    document.getElementById("cbmspinerload").style.display = "none";
+                                    document.getElementById("cbmmembermenu").style.display = "block";
+                                    document.getElementById("cbmbt03").style.display = "block";
+                                    break;
+                                default :
+                                    alert("ขออภัย ไม่พบ event บน QR Code นี้")
+                                    liff.closeWindow()
+                                    break;
+                            }
+
+                        }
+                        else
+                        {
+                          alert("โปรดเข้าจากช่องทางที่ถูกต้อง")
+                          liff.closeWindow()
+                        }    
+                })
+              }
+              else 
+              {
+                liff.login()
+              }
+              ///////////////////////////////////////
+        // }
+        // else {
+        //   //location.replace("https://www.google.com");
+        //   liff.closeWindow()
+        // }
+        ///////////////////////////////////////
+    })
+    await liff.init({ liffId: "1655991608-Gb4dl5VX" }) //edit (https://developers.line.biz/console/channel/1655991608/liff/)
+}
+///////////////////////////////////////////////////////////////////////////////////////////// 
+    main();
+/////////////////////////////////////////////////////////////////////////////////////////////
+</script>
+
+</body>
+</html> 
+
